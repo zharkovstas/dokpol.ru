@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$pagetitle$</title>
+    <title>$pagetitle$$if(omitTitleSuffix)$$else$ — Доказательная политика в России$endif$</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/holiday.css@0.9.8" />
-$if(debug)$$else$
+    $if(debug)$$else$
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function (m, e, t, r, i, k, a) {
@@ -26,12 +26,15 @@ $if(debug)$$else$
         <div><img src="https://mc.yandex.ru/watch/83508829" style="position:absolute; left:-9999px;" alt="" /></div>
     </noscript>
     <!-- /Yandex.Metrika counter -->
-$endif$
+    $endif$
 </head>
 
 <body>
     <main>
         $body$
+        $if(hideNavigation)$$else$
+        <p><small><a href="/">На главную</a></small></p>
+        $endif$
     </main>
     <footer>Обратная связь <a href="https://t.me/zharkovstas" target="_blank" rel="noopener">@zharkovstas</a></footer>
 </body>
